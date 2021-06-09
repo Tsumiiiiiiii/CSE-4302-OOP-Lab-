@@ -7,8 +7,9 @@ private:
   int numerator, denominator;
 public:
   void assign(int _numerator, int _denominator) {
-    if (denominator == 0) {
+    if (_denominator == 0) {
       cout << "ERROR : DENOMINATOR CAN'T BE 0 !";
+      exit(0);
     } else {
       numerator = _numerator;
       denominator = _denominator;
@@ -30,7 +31,7 @@ public:
 
 int main() {
   RationalNumber x;
-  x.assign(5, 3);
+  x.assign(5, 0);
   cout << x.convert() << "\n";
   x.print();
   x.invert();
