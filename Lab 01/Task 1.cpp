@@ -28,9 +28,11 @@ public:
 int main() {
   Counter cnt;
   cnt.setIncrementStep(10);
-  cout << cnt.getCount() << "\n";
+  cout << "Count : " <<  cnt.getCount() << "\n";
+  cout << "Incrementing\n";
   cnt.increment();
-  cout << cnt.getCount() << "\n";
+  cout << "Count : " << cnt.getCount() << "\n";
+  cout << "Resetting\n";
   cnt.resetCount();
-  cout << cnt.getCount() << "\n";
+  cout << "Count : " << cnt.getCount() << "\n";
 }
