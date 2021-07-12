@@ -46,6 +46,10 @@ public:
   Matrix3D inverse() {
     Matrix3D ret;
     double DET = det();
+    if (DET == 0) {
+      cout << "Inverse doesnt exist";
+      exit(0);
+    }
     for (int i = 0; i < 3; ++i) {
       for (int j = 0; j < 3; ++j) {
         ret.mat[i][j] = ((mat[(j + 1) % 3][(i + 1) % 3] * mat[(j + 2) % 3][(i + 2) % 3]) - (mat[(j + 1) % 3][(i + 2) % 3] * mat[(j + 2) % 3][(i + 1) % 3])) / DET;
