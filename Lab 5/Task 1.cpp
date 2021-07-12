@@ -70,7 +70,7 @@ Counter operator + (const int& val, const Counter& c) {
 
 int main() {
   Counter cnt;
-  cnt.setIncrementStep(10);
+  cnt.setIncrementStep(14);
   cout << "Count : " <<  cnt.getCount() << "\n";
   cout << "Incrementing\n";
   cnt.increment();
@@ -78,16 +78,16 @@ int main() {
   cout << "Resetting\n";
   cnt.resetCount();
   cout << "Count : " << cnt.getCount() << "\n";
-  Counter c(20, 6);
+  Counter c(14, 7);
   Counter p = cnt + c;
   cout << (p.getCount()) << "\n";
   Counter rs = 5 + p;
-  rs = p + 5;
+  rs = p + 7;
   cout << (rs.getCount()) << "\n"; 
   rs++;
   cout << (rs.getCount()) << "\n";
   ++rs;
   cout << (rs.getCount()) << "\n";
-  Counter x(3, -6);
+  Counter x(7, -14);
   return 0;
 }
