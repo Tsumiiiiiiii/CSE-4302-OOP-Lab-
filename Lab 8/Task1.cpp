@@ -229,12 +229,28 @@ int main() {
   t.set();
   t.get();
   cout << t.area() << " " << t.perimeter() << "\n";
+  Square sq;
+  sq.set();
+  sq.get();
+  cout << sq.area() << " " << sq.perimeter() << "\n";
+  Circle cr;
+  cr.set();
+  cr.get();
+  cout << cr.area() << " " << cr.perimeter() << "\n";
   Cube c;
   c.set();
   c.get();
   cout << c.area() << " " << c.volume() << "\n";
+  Parallelepiped pp;
+  pp.set();
+  pp.get();
+  cout << sq.area() << " " << pp.volume() << "\n";
   Sphere s;
   s.set();
   s.get();
   cout << s.area() << " " << s.volume() << "\n";
+  Cylinder cd;
+  cd.set();
+  cd.get();
+  cout << cd.area() << " " << cd.volume() << "\n";
 }
