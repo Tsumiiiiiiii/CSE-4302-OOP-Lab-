@@ -17,17 +17,17 @@ public:
   }
 };
 
-class Window {
+class Wheel {
 protected:
   double circumference;
 public:
-  Window(double _circumference = 0) : circumference(_circumference) {}
-  void getWindow() const {
-    cout << "Showing window info : ";
+  Wheel(double _circumference = 0) : circumference(_circumference) {}
+  void getWheel() const {
+    cout << "Showing wheel info : ";
     cout << circumference << "\n";
   }
-  void setWindow() {
-    cout << "Enter window info: ";
+  void setWheel() {
+    cout << "Enter wheel info: ";
     cin >> circumference;
   }
 };
@@ -62,7 +62,7 @@ public:
   }
 };
 
-class Car : public Seat, public Window, public Engine, public Door {
+class Car : public Seat, public Wheel, public Engine, public Door {
 private:
   double max_accelaration, fuel_capacity;
 public:
@@ -78,7 +78,7 @@ public:
   void get() const{
     cout << "All the relevant info per category:\n";
     getSeat();
-    getWindow();
+    getWheel();
     getEngine();
     getDoor();
     getCar();
@@ -86,7 +86,7 @@ public:
   void set() {
     cout << "Enter all the relevant info as requested:\n";
     setSeat();
-    setWindow();
+    setWheel();
     setEngine();
     setDoor();
   }
